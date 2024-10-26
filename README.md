@@ -1,2 +1,4 @@
-# AD300-School Management System
- Assignment Week 5
+Download Intellij or Visual Studio Code.
+Open School.java
+To run this code,  find the Main class and click on run.
+or Shift + f10
