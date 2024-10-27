@@ -100,6 +100,18 @@ public class Main {
                 }
             }
             System.out.println();
+            /*
+            current
+            School: Springfield High
+            Department: Science, Mathematics
+            Science Department
+            - Teachers:
+            - Students:
+            Mathematics Department
+            - Teachers:
+            - Students:
+
+             */
 
         }
     }
