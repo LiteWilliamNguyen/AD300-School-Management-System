@@ -172,7 +172,7 @@ class Main {
         scienceDepartment.addStudent(new Student("Gary Oak","Grade 12"));
 
         /*
-        //Display output
+        //Display output trial 1
         //School: Springfield High
         System.out.println("School: "+ school.getSchoolName());
         //Departments: Science, Mathematics
@@ -186,16 +186,40 @@ class Main {
         //Departments: Mathematics
         */
 
-
-
-
-
-
+        //Display Output
+        System.out.println("School: "+ school.getSchoolName());
+        System.out.print("Department: " );
+        for(int i = 0; i<school.getDepartments().size();i++){
+            //Print the name from getDepartmentName
+            System.out.print(school.getDepartments().get(i).getDepartmentName());
+            //if there is still department not list yet, then return ","
+            if ( i < school.getDepartments().size() -1){
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        //School: Springfield High
+        //Department: Science, Mathematics
+        //Display each department details
+        for (Department department: school.getDepartments()){
+            System.out.println(department.getDepartmentName() + " Department");
+            //Display Teacher and student
+            System.out.println("- Teachers: ");
+            for (int i = 0; i < department.getTeachers().size(); i++){
+                Teacher teacher = department.getTeachers().get(i);
+                System.out.print(teacher.getTeacherName() + "(" + teacher.getSubjectTaught() +")");
+                if (i < department.getTeachers().size() - 1) {
+                    System.out.print(", ");
+                }
+            }
+        }
+        System.out.println();
+        
 
     }
 
 }
-/*
+/* Expect Output
 School: Springfield High
 Departments: Science, Mathematics
 Science Department
