@@ -25,12 +25,20 @@ public class Department {
 
     //Method: Add teacher
     public void addTeacher(Teacher teacher) {
-        teachers.add(teacher);
+        if (!teachers.contains(teacher)){
+            teachers.add(teacher);
+        }else {
+            System.out.println("Teacher's name exist.");
+        }
     }
 
     //Methods: Add student
     public void addStudent(Student student) {
-        students.add(student);
+        if (!students.contains(student)){
+            students.add(student);
+        }else {
+            System.out.println("Student's name exist.");
+        }
     }
 
     //Method: Get all teachers
