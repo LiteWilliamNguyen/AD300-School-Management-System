@@ -12,48 +12,43 @@ public class Main {
         //Adding school name
         School school = new School("Springfield High");
 
-        //Add department to school
-        school.addDepartment(new Department("Science"));
-        school.addDepartment(new Department("Mathematics"));
 
         //Adding Science Department name
         Department scienceDepartment = new Department("Science");
 
-        //Add teacher into science department
-        scienceDepartment.addTeacher(new Teacher("Mr.Smith", "Biology"));
-        scienceDepartment.addTeacher(new Teacher("Mrs.Jones", "Chemistry"));
+        //Create teacher and Student into science department
+        Teacher scienceteacher1 = new Teacher("Mr.Smith", "Biology");
+        Teacher scienceteacher2 = new Teacher("Mrs.Jones", "Chemistry");
+        Student sciencestudent1 = new Student("John Doe", "Grade 10");
+        Student sciencestudent2 = new Student("Jane Doe", "Grade 12");
+        Student sciencestudent3 = new Student("Jim Beam", "Grade 11");
 
-        //Add Student into science department
-        scienceDepartment.addStudent(new Student("John Doe", "Grade 10"));
-        scienceDepartment.addStudent(new Student("Jane Doe", "Grade 12"));
-        scienceDepartment.addStudent(new Student("Jim Beam", "Grade 11"));
+        //Add teacher and student into science department
+        school.addDepartment(scienceDepartment);
+        scienceDepartment.addTeacher(scienceteacher1);
+        scienceDepartment.addTeacher(scienceteacher2);
+        scienceDepartment.addStudent(sciencestudent1);
+        scienceDepartment.addStudent(sciencestudent2);
+        scienceDepartment.addStudent(sciencestudent3);
+
 
         //Adding Mathematics Department
         Department mathDepartment = new Department("Mathematics");
 
-        //Add teacher into Mathematics department
-        scienceDepartment.addTeacher(new Teacher("Mr.White", "Calculus"));
-        scienceDepartment.addTeacher(new Teacher("Ms.Black", "Algebra"));
+        //Create teacher and student in math department
+        Teacher mathteacher1 = new Teacher("Mr.White", "Calculus");
+        Teacher mathteacher2 = new Teacher("Ms.Black", "Algebra");
+        Student mathstudent1 = new Student("Tim Cook", "Grade 10");
+        Student mathstudent2 = new Student("Ann Taylor", "Grade 11");
+        Student mathstudent3 = new Student("Gary Oak", "Grade 12");
 
-        //Add Student into science department
-        scienceDepartment.addStudent(new Student("Tim Cook", "Grade 10"));
-        scienceDepartment.addStudent(new Student("Ann Taylor", "Grade 11"));
-        scienceDepartment.addStudent(new Student("Gary Oak", "Grade 12"));
-
-        /*
-        //Display output trial 1
-        //School: Springfield High
-        System.out.println("School: "+ school.getSchoolName());
-        //Departments: Science, Mathematics
-        //using for loop to display all department
-        for(Department department: school.getDepartments()){
-            System.out.println("Departments: " + department.getDepartmentName());
-        }
-        //output
-        //School: Springfield High
-        //Departments: Science
-        //Departments: Mathematics
-        */
+        //Add teacher and student into math department
+        school.addDepartment(mathDepartment);
+        mathDepartment.addTeacher(mathteacher1);
+        mathDepartment.addTeacher(mathteacher2);
+        mathDepartment.addStudent(mathstudent1);
+        mathDepartment.addStudent(mathstudent2);
+        mathDepartment.addStudent(mathstudent3);
 
         //Display Output
         System.out.println("School: " + school.getSchoolName());
