@@ -73,8 +73,8 @@ class SchoolManagementTest {
         science.addStudent(duplicateStudent);
         science.addStudent(duplicateStudent); // Duplicate
 
-        assertEquals(2, science.getTeachers().size()); // Duplicates allowed
-        assertEquals(2, science.getStudents().size());
+        assertEquals(1, science.getTeachers().size()); // No Duplicates allowed
+        assertEquals(1, science.getStudents().size());
     }
 
     // Edge Test Case 3: Test handling null teacher and student entries
